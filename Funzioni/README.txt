@@ -50,4 +50,4 @@ OSSERVAZIONI SUI TEST:
 3 - con un passo troppo grande l'algoritmo si comporta in modo strano (divergenza? riscontrato in: test 4, 6)
 
 ALTRE CONSIDERAZIONI:
-Non sono stati fatti controlli invandenti sull'imput dell'utente. Non ci sembrava inerente alla prova e avrebbe potenzialmente disturbato il controllo del codice effettutato con script dal docente.
+Non sono stati fatti controlli invandenti sull'input dell'utente. Non ci sembrava inerente alla prova e avrebbe potenzialmente disturbato il controllo del codice effettutato con script dal docente.

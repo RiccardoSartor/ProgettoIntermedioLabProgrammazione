@@ -93,8 +93,7 @@ int main() {
         cout << "Vuoi eseguire un altro test? (s/n): ";
         cin >> continua;
         cout << endl;
-        continua = static_cast<char>(tolower(static_cast<unsigned char>(continua))); //converte l'eventuale carattere maiuscolo in minuscolo
-    }while (continua == 's');
+    }while (continua == 's' || continua == 'S');
 
     return 0;
 }
