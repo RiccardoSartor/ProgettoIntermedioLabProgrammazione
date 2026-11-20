@@ -26,12 +26,7 @@ int main() {
             cout << "\nNumero funzione: ";
             cin >> num_funz;
 
-            // Evita loop infinito se inserisci una lettera invece di un numero
-            if (cin.fail()) {
-                cin.clear();
-                cin.ignore(10000, '\n');
-                num_funz = 0;
-            }
+            
 
             if (num_funz < 1 or num_funz > 8) {
                 cout << "Numero funzione non valido\n\n";
@@ -54,7 +49,6 @@ int main() {
         cout << "\nSoglia di tolleranza: ";
         cin >> T;
 
-        // Chiamata del metodo sull'oggetto creato
         switch (num_funz) {
             case 1: { 
                 Function1 f; 
