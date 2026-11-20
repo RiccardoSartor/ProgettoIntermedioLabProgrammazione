@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cctype>
 #include "../include/function.h" 
+#include "../include/gradiente.h"
 
 using namespace std;
 
@@ -9,9 +10,9 @@ int main() {
     int     num_funz = 0;
     double  x_0 = 0.0, 
             y_0 = 0.0,
-            a   = 0.0,
-            T   = 0.0;
-    int     N = 0;
+            a   = 0.0,      //passo
+            T   = 0.0;      //soglia di tolleranza
+    int     N = 0;          //iterazioni massime
 
     do{
         do {
@@ -32,59 +33,59 @@ int main() {
 
         }while (num_funz < 1 || num_funz > 8);
 
-        cout << "Coordinate iniziali x_0: "<<endl;
+        cout << "Coordinate iniziali x_0: ";
         cin >> x_0;
 
-        cout << "Coordinate iniziali y_0: "<<endl;
+        cout << "Coordinate iniziali y_0: ";
         cin >> y_0;
 
-        cout << "Passo a: "<<endl;
+        cout << "Passo a: ";
         cin >> a;
         
-        cout << "Numero massimo di iterazioni: "<<endl;
+        cout << "Numero massimo di iterazioni: ";
         cin >> N;
 
-        cout << "Soglia di tolleranza: "<<endl;
+        cout << "Soglia di tolleranza: ";
         cin >> T;
 
         switch (num_funz) {
             case 1: { 
                 Function1 f; 
-                /**/; 
+                discesa(f, x_0, y_0, a, N, T);
                 break; 
             }
             case 2: { 
                 Function2 f; 
-                /**/; 
+                discesa(f, x_0, y_0, a, N, T);
                 break; 
             }
             case 3: { 
                 Function3 f; 
-                /**/; 
+                discesa(f, x_0, y_0, a, N, T);
                 break; 
             }
             case 4: { 
                 Function4 f; 
-                /**/; 
+                discesa(f, x_0, y_0, a, N, T); 
                 break; 
             }
             case 5: { 
                 Function5 f; 
-                /**/; 
+                discesa(f, x_0, y_0, a, N, T); 
                 break; 
             }
             case 6: { 
                 Function6 f; 
-                /**/; 
+                discesa(f, x_0, y_0, a, N, T); 
                 break; }
             case 7: { 
                 Function7 f; 
-                /**/; 
+                discesa(f, x_0, y_0, a, N, T); 
                 break; 
             }
             case 8: { 
                 Function8 f; 
-                /**/; 
+                discesa(f, x_0, y_0, a, N, T);
                 break; 
             }
         }

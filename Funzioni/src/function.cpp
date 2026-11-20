@@ -2,6 +2,10 @@
 #include <cmath>
 
 const double PI = 3.14159265358979323846;
+/*
+si poteva usare il pigreco di numbers ma sarebbe seriva la versione c++20, in questo modo rendiamo la compilazione del codice sicura e 
+non perdiamo di precisione, in quanto anche numbers da il valore di pigreco in double.
+*/
 
 using namespace std;
 
