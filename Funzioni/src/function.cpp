@@ -3,7 +3,7 @@
 
 const double PI = 3.14159265358979323846;
 /*
-si poteva usare il pigreco di numbers ma sarebbe seriva la versione c++20, in questo modo rendiamo la compilazione del codice sicura e 
+si poteva usare il pigreco di numbers ma sarebbe servita la versione c++20, in questo modo rendiamo la compilazione del codice sicura e 
 non perdiamo di precisione, in quanto anche numbers da il valore di pigreco in double.
 */
 
@@ -11,11 +11,11 @@ using namespace std;
 
 
 /*
-Per ogni funzione vengono definiti tre metodi:
-value   ->  corrisponde a f(x,y)
+Per ogni funzione vengono definiti quattro metodi:
+value   ->  ritorna il valore di f calcilato in una coppia di coordinate (x,y)
 dx      ->  derivata parziale rispetto a x
 dy      ->  derivata parziale rispetto a y
-m       ->  minimo assoluto della funzione (m=f(x,y))
+m       ->  minimo assoluto della funzione (valore di f nel punto di minimo globale)
 */
 
 

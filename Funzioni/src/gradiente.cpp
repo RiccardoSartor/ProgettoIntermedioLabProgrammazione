@@ -27,7 +27,7 @@ void discesa(const Function& f, const double x0, const double y0, const double p
     double  x = x0, //mi definisco le mie due variabili x, y che posso utilizzare senza modificare i valori originali.
             y = y0;
 
-    cout << scientific << setprecision(6);   // indice della tabella che poi viene stampato con la funzione stampa()
+    cout << scientific << setprecision(6);   // imposto il formato della tabella con iomanip, in modo da avere i risultati sul terminale ordinati
     cout << setw(6)  << "k"
          << setw(34) << "p_k"
          << setw(16) << "f(p_k)"
@@ -36,7 +36,7 @@ void discesa(const Function& f, const double x0, const double y0, const double p
          << endl;
             
     while(k<N && norma(f, x, y)>=T){ //vado avanti finche non raggiungo le iterazioni massime oppure fino a quando il valore è sotto la tolleranza.
-        double temp_x = x, temp_y = y; // ho dovuto creare queste due variabili altrimenti avrei modificato x/y intanto che le savavo.
+        double temp_x = x, temp_y = y; // ho dovuto creare queste due variabili altrimenti avrei modificato x/y intanto che le salvavo.
         k++;
 
         x-=passo*f.dx(temp_x, temp_y);

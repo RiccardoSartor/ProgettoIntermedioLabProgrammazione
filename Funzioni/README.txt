@@ -43,3 +43,11 @@ Sono stati effettutati i seguenti test:
     8	        0.5	    -0.5	    0.1	    1000	0.000001
     8	        2.5	    3.5	        0.1	    1000	0.000001
     8	        3	    3	        0.1	    1000	0.000001
+
+OSSERVAZIONI SUI TEST:
+1 - con "nan" si blocca ( test 13 )
+2 - il fatto che il valore sia sotto alla soglia di tolleranza non garantisce che ci troviamo in un punto di minimo globale (test 9, 11, 16, 19)
+3 - con un passo troppo grande l'algoritmo si comporta in modo strano (divergenza? riscontrato in: test 4, 6)
+
+ALTRE CONSIDERAZIONI:
+Non sono stati fatti controlli invandenti sull'imput dell'utente. Non ci sembrava inerente alla prova e avrebbe potenzialmente disturbato il controllo del codice effettutato con script dal docente.

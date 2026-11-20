@@ -3,7 +3,7 @@
 
 class Function { //Dichiaro una classe chiamata Function
     public:
-        virtual double value(double x , double y)   const = 0;//virtual permette di usare polimorfismo dinamico.
+        virtual double value(double x , double y)   const = 0;    //virtual permette di usare polimorfismo dinamico.
         virtual double dx(double x, double y)       const = 0;    //const impedice di modificare i membri dell'oggetto in cui viene chiamato.
         virtual double dy(double x, double y)       const = 0;    //= 0 indica che il metodo è una funzione virtuale pura.
         virtual double m()                          const = 0;
