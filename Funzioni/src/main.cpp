@@ -1,52 +1,50 @@
 #include <iostream>
-#include "function.h" 
+#include <cctype>
+#include "../include/function.h" 
 
 using namespace std;
 
 int main() {
-    char continua = 's';
-    int num_funz = 0;
-    double x_0 = 0.0, y_0 = 0.0;
-    double a = 0.0;
-    int N = 0;
-    double T = 0.0;
+    char    continua;
+    int     num_funz = 0;
+    double  x_0 = 0.0, 
+            y_0 = 0.0,
+            a   = 0.0,
+            T   = 0.0;
+    int     N = 0;
 
-    while (continua == 's' or continua == 'S') {
+    do{
         do {
-            cout << "Scegli la funzione (1-8)\n";
-            cout << "1: f1(x,y) = (x^2 + y^2) / 2\n";
-            cout << "2: f2(x,y) = (x^2 + 16*y^2) / 2\n";
-            cout << "3: f3(x,y) = (x^2 - 1)^2 + y^2\n";
-            cout << "4: f4(x,y) = (x^2 - 1)^2 + (x-1)^2/5 + y^2\n";
-            cout << "5: f5(x,y) = 4 * sinh^2(x/2) + y^2\n";
-            cout << "6: f6(x,y) = ln(1 + x^2 + y^2)\n";
-            cout << "7: f7(x,y) = 1 - exp(-(x^2 + y^2))\n";
-            cout << "8: f8(x,y) = 2 - cos(pi*x) - cos(pi*y)\n";
-
-            cout << "\nNumero funzione: ";
+            cout 
+                << "Scegli la funzione (1-8)"                   << endl
+                << "1: f1(x,y) = (x^2 + y^2) / 2"               << endl
+                << "2: f2(x,y) = (x^2 + 16*y^2) / 2"            << endl
+                << "3: f3(x,y) = (x^2 - 1)^2 + y^2"             << endl
+                << "4: f4(x,y) = (x^2 - 1)^2 + (x-1)^2/5 + y^2" << endl
+                << "5: f5(x,y) = 4 * sinh^2(x/2) + y^2"         << endl
+                << "6: f6(x,y) = ln(1 + x^2 + y^2)"             << endl
+                << "7: f7(x,y) = 1 - exp(-(x^2 + y^2))"         << endl
+                << "8: f8(x,y) = 2 - cos(pi*x) - cos(pi*y)"     << endl;
+            cout << "Numero funzione: ";
             cin >> num_funz;
 
-            
+            if (num_funz < 1 || num_funz > 8) {cout << "Numero funzione non valido"<<endl<<endl;}
 
-            if (num_funz < 1 or num_funz > 8) {
-                cout << "Numero funzione non valido\n\n";
-            }
+        }while (num_funz < 1 || num_funz > 8);
 
-        } while (num_funz < 1 || num_funz > 8);
-
-        cout << "\nCoordinate iniziali x_0: ";
+        cout << "Coordinate iniziali x_0: "<<endl;
         cin >> x_0;
 
-        cout << "\nCoordinate iniziali y_0: ";
+        cout << "Coordinate iniziali y_0: "<<endl;
         cin >> y_0;
 
-        cout << "\nPasso a: ";
+        cout << "Passo a: "<<endl;
         cin >> a;
         
-        cout << "\nNumero massimo di iterazioni: ";
+        cout << "Numero massimo di iterazioni: "<<endl;
         cin >> N;
 
-        cout << "\nSoglia di tolleranza: ";
+        cout << "Soglia di tolleranza: "<<endl;
         cin >> T;
 
         switch (num_funz) {
@@ -91,10 +89,11 @@ int main() {
             }
         }
 
-        cout << "\nVuoi eseguire un altro test? (s/n): ";
+        cout << "Vuoi eseguire un altro test? (s/n): ";
         cin >> continua;
-        cout << "\n";
-    }
+        cout << endl;
+        continua = static_cast<char>(tolower(static_cast<unsigned char>(continua))); //converte l'eventuale carattere maiuscolo in minuscolo
+    }while (continua == 's');
 
     return 0;
 }
