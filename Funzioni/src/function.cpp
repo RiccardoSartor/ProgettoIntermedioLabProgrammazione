@@ -1,6 +1,7 @@
 #include "function.h"
 #include <cmath>
-#include <numbers>
+
+const double PI = 3.14159265358979323846;
 
 using namespace std;
 
@@ -91,11 +92,11 @@ double Function7::dy(double x, double y) const {
 //FUNZIONE 8
 
 double Function8::value(double x, double y) const {
-    return (2-cos(numbers::pi*x)-cos(numbers::pi*y));
+    return (2-cos(PI*x)-cos(PI*y));
 }
 double Function8::dx(double x, double y) const {
-    return (numbers::pi*sin(numbers::pi*x));
+    return (PI*sin(PI*x));
 }
 double Function8::dy(double x, double y) const {
-    return (numbers::pi*sin(numbers::pi*y));
+    return (PI*sin(PI*y));
 }
