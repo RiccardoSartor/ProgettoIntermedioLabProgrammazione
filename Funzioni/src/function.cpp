@@ -1,4 +1,4 @@
-#include "function.h"
+#include "../include/function.h"
 #include <cmath>
 
 const double PI = 3.14159265358979323846;
