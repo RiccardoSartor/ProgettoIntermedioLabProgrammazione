@@ -1,13 +1,63 @@
-include <iostream>
-
+#include <iostream>
 using namespace std;
-
-const int MAX_N = 20; //iterazioni massime consentite per funzione.
-const double T = 0; //Soglia minima norma del gradiente
 
 int main(){
 
+    char continua = 's';
+    int num_funz = 0;
+    double x_0 = 0.0, y_0 = 0.0;
+    double a = 0.0;
+    int N = 0;
+    double T = 0.0;
+
+    while (continua == 's' or continua == 'S'){
+        
+
+        do {
+        cout<<"Scegli la funzione (1-8)\n";
+        cout<<"1: f1(x,y) = (x^2 + y^2) / 2\n";
+        cout<<"2: f2(x,y) = (x^2 + 16*y^2) / 2\n";
+        cout<<"3: f3(x,y) = (x^2 - 1)^2 + y^2\n";
+        cout<<"4: f4(x,y) = (x^2 - 1)^2 + (x-1)^2/5 + y^2\n";
+        cout<<"5: f5(x,y) = 4 * sinh^2(x/2) + y^2\n";
+        cout<<"6: f6(x,y) = ln(1 + x^2 + y^2)\n";
+        cout<<"7: f7(x,y) = 1 - exp(-(x^2 + y^2))\n";
+        cout<<"8: f8(x,y) = 2 - cos(pi*x) - cos(pi*y)\n";
+
+        cout<<"\nNumero funzione: ";
+        cin>>num_funz;
+
+        if(num_funz < 1 or num_funz > 8){
+            cout<<"Numero funzione non valido";
+
+        }
+
+        } while (num_funz < 1 || num_funz > 8);
+
+        cout<<"\nCoordinate iniziali x_0: ";
+        cin>> x_0;
+
+        cout<<"\nCoordinate iniziali y_0: ";
+        cin>> y_0;
+
+        cout<<"\nPasso a: ";
+        cin>>a;
+        
+        cout<<"\nNumero massimo di iterazioni: ";
+        cin>> N;
+
+        cout<<"\nSoglia di tolleranza ";
+        cin>> T;
+
+        /*
+        costruttori / metodi
+        
+        */
 
 
-    return 0;
+        cout<<"\nVuoi eseguire un altro test? (s/n): ";
+        cin>> continua;
+
+    }
+    
 }
